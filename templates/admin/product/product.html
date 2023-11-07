@@ -1,0 +1,51 @@
+{% extends 'admin/master.html' %}
+{% block student_list %}
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          Product Updated Successfully!
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true" style="color:white">&times;</span>
+            </button>
+        </div>
+      {% endif %}
+    {% endwith %}
+    <div style="display: flex; justify-content: space-between;">
+        <label>Product List</label>
+        <a class="button btn btn-success" href="{{ url_for('product.add_product') }}">Add Products</a>
+    </div>
+    <div class="container-fluid pt-3">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>No</th>
+                <th>Category</th>
+                <th>Name</th>
+                <th>Cost</th>
+                <th>Price</th>
+                <th>Image</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for row in rows %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ row['category_id'] }}</td>
+                    <td>{{ row['name'] }}</td>
+                    <td>{{ row['cost'] }}</td>
+                    <td>{{ row['price'] }}</td>
+                    <td>{{ row['image'] }}</td>
+                    <td>{{ row['status'] }}</td>
+                    <td>
+                        <a href="{{ BASE_URL }}/admin/edit_product/{{ row['ID'] }}" class="btn btn-primary">Edit</a>
+                        <a href="{{ BASE_URL }}/admin/delete_row/{{ row['ID'] }}" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

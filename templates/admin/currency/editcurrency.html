@@ -1,0 +1,39 @@
+{% extends 'admin/master.html' %}
+{% block student_list %}
+    <div style="display: flex; justify-content: space-between;">
+        <label>Update Product</label>
+    </div>
+    <div class="container-fluid pt-3">
+        <form method="POST">
+            <div class="form-group">
+                <label for="id">ID:</label>
+                <input readonly type="text" class="form-control" name="id" value="{{ rows[0]['id'] }}">
+            </div>
+            <div class="form-group">
+                <label for="name">Currency Name</label>
+                <input readonly type="text" class="form-control" name="name" value="{{ rows[0]['name'] }}">
+            </div>
+            <div class="form-group">
+                <label for="code">Code</label>
+                <input type="text" class="form-control" name="code" value="{{ rows[0]['code'] }}">
+            </div>
+            <div class="form-group">
+                <label for="cost">Symbol</label>
+                <input type="text" class="form-control" name="symbol" value="{{ rows[0]['symbol'] }}">
+            </div>
+            <div class="form-group">
+                <label for="default">Default</label>
+                <select class="form-control" name="default">
+                    <option value="Yes" {% if rows[0]['is_default'] == 'Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if rows[0]['is_default'] == 'No' %}selected{% endif %}>No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="image">Sellout Price</label>
+                <input type="text" class="form-control" name="selloutprice" value="{{ rows[0]['sell_out_price'] }}">
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+
+    </div>
+{% endblock %}

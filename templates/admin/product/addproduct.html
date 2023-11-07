@@ -1,0 +1,43 @@
+{% extends 'admin/master.html' %}
+{% block student_list %}
+    <div style="display: flex; justify-content: space-between;">
+        <label>Add Product</label>
+    </div>
+    <div class="container-fluid pt-3">
+        <form method="POST">
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select class="form-control" name="category">
+                    {% for category in categories %}
+                        <option value="{{ category }}">{{ category }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="cost">Cost:</label>
+                <input type="number" class="form-control" id="cost" name="cost">
+            </div>
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" class="form-control" id="price" name="price">
+            </div>
+            <div class="form-group">
+                <label for="image">Image:</label>
+                <input type="text" class="form-control" id="image" name="image">
+            </div>
+            <div class="form-group">
+                <label for="status">Status</label>
+                <select class="form-control" name="status">
+                    <option value="Available">Available</option>
+                    <option value="Unavailable">Unavailable</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Student</button>
+            <a class="button btn btn-danger" href="{{ url_for('product.product_list') }}">Discard</a>
+        </form>
+    </div>
+{% endblock %}

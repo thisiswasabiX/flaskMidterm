@@ -1,0 +1,31 @@
+{% extends 'admin/master.html' %}
+{% block student_list %}
+    <div style="display: flex; justify-content: space-between;">
+        <label>Edit Customer</label>
+    </div>
+    <div class="container-fluid pt-3">
+        <form method="POST">
+            <div class="form-group">
+                <label for="id">ID</label>
+                <input readonly type="text" class="form-control" name="id" value="{{ rows[0]['id'] }}">
+            </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" name="name" value="{{ rows[0]['name'] }}">
+            </div>
+            <div class="form-group">
+                <label for="image">Image:</label>
+                <input type="text" class="form-control" name="image" value="{{ rows[0]['image'] }}">
+            </div>
+            <div class="form-group">
+                <label for="status">Status</label>
+                <select class="form-control" name="status">
+                    <option value="Available" {% if rows[0]['status'] == 'Available' %}selected{% endif %}>Available</option>
+                    <option value="Unavailable" {% if rows[0]['status'] == 'Unavailable' %}selected{% endif %}>Unavailable</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+
+    </div>
+{% endblock %}

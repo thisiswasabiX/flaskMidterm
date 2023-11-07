@@ -1,0 +1,43 @@
+{% extends 'admin/master.html' %}
+{% block student_list %}
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          Category Updated Successfully!
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true" style="color:white">&times;</span>
+            </button>
+        </div>
+      {% endif %}
+    {% endwith %}
+    <div style="display: flex; justify-content: space-between;">
+        <label>Category List</label>
+        <a class="button btn btn-success" href="{{ url_for('category.add_category') }}">Add New Category</a>
+    </div>
+    <div class="container-fluid pt-3">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for row in rows %}
+                <tr>
+                    <td>{{ row['id'] }}</td>
+                    <td>{{ row['name'] }}</td>
+                    <td>{{ row['status'] }}</td>
+                    <td>
+                        <a href="{{ BASE_URL }}/admin/category/edit_category/{{ row['id'] }}" class="btn btn-primary">Edit</a>
+                        <a href="{{ BASE_URL }}/admin/category/delete_row/{{ row['id'] }}" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

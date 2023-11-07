@@ -1,0 +1,287 @@
+
+body {
+    background-color: #eee
+}
+
+.container {
+    width: 900px
+}
+
+.card {
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    width: 190px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.image-container {
+    position: relative
+}
+
+.thumbnail-image {
+    border-radius: 10px !important
+}
+
+.discount {
+    background-color: #81a9f5;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 15px;
+    border-radius: 6px;
+    color: #fff
+}
+
+.wishlist i {
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.wishlist i:hover {
+    height: 25px;
+    width: 25px;
+    background-color: #ff0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.wishlist i:focus {
+    height: 25px;
+    width: 25px;
+    background-color: #ff0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.first {
+    position: absolute;
+    width: 100%;
+    padding: 9px
+}
+
+.dress-name {
+    font-size: 13px;
+    font-weight: bold;
+    width: 75%
+}
+
+.new-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #81a9f5
+}
+
+.old-price {
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: line-through;
+    color: grey
+}
+
+.btn {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    padding: 3px
+}
+
+.creme {
+    background-color: #fff;
+    border: 2px solid grey
+}
+
+.creme:hover {
+    border: 3px solid grey
+}
+
+.creme:focus {
+    background-color: grey
+}
+
+.red {
+    background-color: #fff;
+    border: 2px solid red
+}
+
+.red:hover {
+    border: 3px solid #ff0000
+}
+
+.red:focus {
+    background-color: #ff0000
+}
+
+.blue {
+    background-color: #fff;
+    border: 2px solid #81a9f5
+}
+
+.blue:hover {
+    border: 3px solid #81a9f5
+}
+
+.blue:focus {
+    background-color: #81a9f5
+}
+
+.darkblue {
+    background-color: #fff;
+    border: 2px solid #01579B
+}
+
+.darkblue:hover {
+    border: 3px solid #01579B
+}
+
+.darkblue:focus {
+    background-color: #01579B
+}
+
+.yellow {
+    background-color: #fff;
+    border: 2px solid #FFCA28
+}
+
+.yellow:hover {
+    border-radius: 3px solid #FFCA28
+}
+
+.yellow:focus {
+    background-color: #FFCA28
+}
+
+.item-size {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid grey;
+    color: grey;
+    font-size: 10px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.item-size:hover {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: grey;
+    border: 1px solid grey;
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.item-size:focus {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: grey;
+    border: 1px solid grey;
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.rating-star {
+    font-size: 10px !important
+}
+
+.rating-number {
+    font-size: 10px;
+    color: grey
+}
+
+button {
+    text-decoration: none;
+    border: none;
+    background: #81a9f5;
+    width:100px;
+    border-radius:50px;
+}
+
+button:hover {
+    text-decoration: none;
+    border: none;
+    background: #bfd5fd;
+    color: #5c81c9;
+}
+
+
+.buy {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 500;
+    background: #81a9f5;
+}
+
+.voutchers {
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    width: 190px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden
+}
+
+.voutcher-divider {
+    display: flex
+}
+
+.voutcher-left {
+    width: 60%
+}
+
+.voutcher-name {
+    color: grey;
+    font-size: 9px;
+    font-weight: 500
+}
+
+.voutcher-code {
+    color: #81a9f5;
+    font-size: 11px;
+    font-weight: bold
+}
+
+.voutcher-right {
+    width: 40%;
+    background-color: #81a9f5;
+    color: #fff
+}
+
+.discount-percent {
+    font-size: 12px;
+    font-weight: bold;
+    position: relative;
+    top: 5px
+}
+
+.off {
+    font-size: 14px;
+    position: relative;
+    bottom: 5px
+}

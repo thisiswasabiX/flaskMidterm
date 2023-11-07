@@ -1,0 +1,39 @@
+{% extends 'admin/master.html' %}
+{% block student_list %}
+    <div style="display: flex; justify-content: space-between;">
+        <label>Add New Currency</label>
+    </div>
+    <div class="container-fluid pt-3">
+        <form method="POST">
+            <div class="form-group">
+                <label for="category">Currency</label>
+                <input type="text" class="form-control" id="currency" name="currency">
+            </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="code">Code</label>
+                <input type="text" class="form-control" id="code" name="code">
+            </div>
+            <div class="form-group">
+                <label for="symbol">Symbol</label>
+                <input type="text" class="form-control" id="symbol" name="symbol">
+            </div>
+            <div class="form-group">
+                <label for="status">Default</label>
+                <select class="form-control" name="default">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="image">Sell Out Price</label>
+                <input type="number" class="form-control" id="selloutprice" name="selloutprice">
+            </div>
+            <button type="submit" class="btn btn-primary">Add Currency</button>
+            <a class="button btn btn-danger" href="{{ url_for('currency.currency_list') }}">Discard</a>
+        </form>
+    </div>
+{% endblock %}

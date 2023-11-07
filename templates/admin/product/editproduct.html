@@ -1,0 +1,47 @@
+{% extends 'admin/master.html' %}
+{% block student_list %}
+    <div style="display: flex; justify-content: space-between;">
+        <label>Update Product</label>
+    </div>
+    <div class="container-fluid pt-3">
+        <form method="POST">
+            <div class="form-group">
+                <label for="id">ID:</label>
+                <input readonly type="text" class="form-control" name="id" value="{{ rows[0]['id'] }}">
+            </div>
+            <div class="form-group">
+                <label for="category">Category ID:</label>
+                <select class="form-control" name="category">
+                    <option value="1" {% if rows[0]['category_id'] == 1 %}selected{% endif %}>1</option>
+                    <option value="2" {% if rows[0]['category_id'] == 2 %}selected{% endif %}>2</option>
+                    <option value="3" {% if rows[0]['category_id'] == 3 %}selected{% endif %}>3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" name="name" value="{{ rows[0]['name'] }}">
+            </div>
+            <div class="form-group">
+                <label for="cost">Cost:</label>
+                <input type="number" class="form-control" name="cost" value="{{ rows[0]['cost'] }}">
+            </div>
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" class="form-control" name="price" value="{{ rows[0]['price'] }}">
+            </div>
+            <div class="form-group">
+                <label for="image">Image:</label>
+                <input type="text" class="form-control" name="image" value="{{ rows[0]['image'] }}">
+            </div>
+            <div class="form-group">
+                <label for="status">Status</label>
+                <select class="form-control" name="status">
+                    <option value="Available" {% if rows[0]['status'] == 'Available' %}selected{% endif %}>Available</option>
+                    <option value="Unavailable" {% if rows[0]['status'] == 'Unavailable' %}selected{% endif %}>Unavailable</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+
+    </div>
+{% endblock %}
